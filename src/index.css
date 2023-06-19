@@ -2,6 +2,28 @@
   box-sizing: border-box;
 }
 
+.ant-button {
+  color: #92cdef;
+}
+
+.downloadbutn button.ant-btn {
+
+  background-color: #f54e6184;
+  border: 0;
+  color: white;
+  scale: 3;
+  transition: 500ms;
+
+}
+
+.downloadbutn button.ant-btn:hover {
+
+  background-color: #ff7182cb;
+  scale: 3.5;
+  color: aliceblue;
+  transition: 500ms;
+}
+
 html,
 body,
 #root {
@@ -16,9 +38,22 @@ body {
   font-family: inter;
 }
 
-.modelcanvas {
-  background-color: blue;
+@media screen and (max-width: 111110px) {
+  .modeldiv {
+    height: 55.6vw;
+  }
 }
+
+
+
+.modelcanvas {
+  background-color: white;
+  background: url(./SereneFinal.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 canvas {
 
@@ -44,4 +79,36 @@ canvas {
 
 audio {
   display: none;
+}
+
+.header {
+  background-color: #1dc0bf;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header>button {
+  color: white;
+  background-color: #f37381;
+  border: 0px;
+  border-radius: 10px;
+  transition: ease-in-out;
+  transition: 300ms;
+}
+
+.header>button :hover {
+  color: #1dc0bf;
+  transition: 240ms;
+}
+
+.qrcode {
+  background-color: #1dc0bf;
+}
+
+.ant-col{
+  text-align: center;
+}
+.textp{
+  font-size: xx-large;
 }

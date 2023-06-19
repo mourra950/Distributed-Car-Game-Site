@@ -31,25 +31,18 @@ function App() {
           loop
         />
       </div>
+
       <Layout>
-        <Header>
-          <Button>Game</Button>
-          <Button>How to Play</Button>
-          <Button>Download</Button>
-          <Button>Credits</Button>
-        </Header>
-        <Layout>
-          <Content>
-            <ModelSection />
-            <FirstSection />
-            <AboutSection />
+        <Content>
+          <ModelSection />
+          <FirstSection />
+          <AboutSection />
 
-          </Content>
-
-        </Layout>
-        <Footer>footer</Footer>
+        </Content>
 
       </Layout>
+
+
       {/*
       <div hidden={!show}>
         {!show &&
