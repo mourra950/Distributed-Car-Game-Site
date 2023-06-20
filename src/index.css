@@ -2,24 +2,94 @@
   box-sizing: border-box;
 }
 
-.ant-button {
-  color: #92cdef;
+.stat .ant-statistic-title {
+  color: #2ac2c2;
+  font-size: xxx-large;
+  transition: 500ms;
 }
 
-.downloadbutn button.ant-btn {
-
-  background-color: #f54e6184;
-  border: 0;
-  color: white;
-  scale: 3;
+.stat .ant-statistic-title:hover {
+  color: #ff9054;
   transition: 500ms;
 
 }
 
-.downloadbutn button.ant-btn:hover {
+.stat .ant-statistic-content-value {
+  color: #000000;
+  font-size: xxx-large;
+  transition: 100ms;
+}
 
-  background-color: #ff7182cb;
-  scale: 3.5;
+.stat .ant-statistic-content-value:hover {
+  scale: 1.75;
+  transition: 100ms;
+}
+
+
+@font-face {
+  font-family: Reddd;
+  src: url("./KGRedHands.ttf");
+}
+
+html {
+  background-color: whitesmoke;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: Reddd;
+}
+
+.downloadbutnD a.ant-btn {
+  scale: 1.5;
+  margin: 2vmax;
+  background-color: #ffffff61;
+  border: 0;
+  color: rgba(0, 0, 0, 0.616);
+  transition: 500ms;
+  text-align: center;
+}
+
+.downloadbutnD a.ant-btn:hover {
+
+  background-color: #ffffff;
+  color: #000000;
+  transition: 500ms;
+}
+
+.downloadbutnG a.ant-btn {
+  margin: 2vmax;
+  scale: 1.5;
+
+
+  background-color: #38383856;
+  border: 0;
+  color: rgba(255, 255, 255, 0.66);
+  transition: 500ms;
+  text-align: center;
+}
+
+.downloadbutnG a.ant-btn:hover {
+
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  transition: 500ms;
+}
+
+.downloadbutnY a.ant-btn {
+  margin: 3vmax;
+  scale: 1.5;
+
+  background-color: #ff16326b;
+  border: 0;
+  color: white;
+  transition: 500ms;
+  text-align: center;
+}
+
+.downloadbutnY a.ant-btn:hover {
+
+  background-color: #ff2e46f4;
   color: aliceblue;
   transition: 500ms;
 }
@@ -35,7 +105,6 @@ body,
 
 body {
   background: #92cdef;
-  font-family: inter;
 }
 
 @media screen and (max-width: 111110px) {
@@ -82,7 +151,7 @@ audio {
 }
 
 .header {
-  background-color: #1dc0bf;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -98,17 +167,52 @@ audio {
 }
 
 .header>button :hover {
-  color: #1dc0bf;
+  color: #ffffff;
   transition: 240ms;
 }
 
 .qrcode {
-  background-color: #1dc0bf;
+  background-color: #ffffff;
 }
 
-.ant-col{
+.ant-col {
   text-align: center;
 }
-.textp{
-  font-size: xx-large;
+
+.textT {
+  font-family: Reddd;
+
+}
+
+.textp {
+  font-family: Reddd;
+
+  font-size: large;
+}
+
+.rows {
+  font-family: Reddd;
+
+  padding: 3vmax;
+}
+
+.controlsCol {
+  font-family: Reddd;
+
+  padding: 3vmax;
+}
+
+.imageCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.colbut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }

@@ -3,13 +3,26 @@ const { Title, Paragraph } = Typography;
 export default function FirstSection() {
     return (
         <div>
-            <Row>
-                <Col xs={24} xl={12}>
+
+            <Row >
+                <Col className="controlsCol" xs={24} >
+                    <Typography>
+                        <Title className="textT">
+                            Game Controls
+                        </Title>
+                        <Paragraph className="textp">
+                            in the next section we will discuss simple and important controls
+                        </Paragraph>
+                    </Typography>
+                </Col>
+            </Row>
+            <Row className="rows">
+                <Col className="imageCol controlsCol" xs={24} xl={12}>
                     <Image src="./keyboard.png" />
                 </Col>
-                <Col xs={24} xl={12}>
+                <Col className="controlsCol" xs={24} xl={12}>
                     <Typography>
-                        <Title>
+                        <Title className="textT">
                             Car Controls
                         </Title>
                         <Paragraph className="textp">
@@ -18,10 +31,10 @@ export default function FirstSection() {
                     </Typography>
                 </Col>
             </Row>
-            <Row>
-                <Col xs={{ span: 24, order: 2 }} xl={{ span: 12, order: 1 }}>
+            <Row className="rows">
+                <Col className="controlsCol" xs={{ span: 24, order: 2 }} xl={{ span: 12, order: 1 }}>
                     <Typography>
-                        <Title>
+                        <Title className="textT">
                             In Game Chat
                         </Title>
                         <Paragraph className="textp">
@@ -29,7 +42,7 @@ export default function FirstSection() {
                         </Paragraph>
                     </Typography>
                 </Col>
-                <Col xs={{ span: 24, order: 1 }} xl={{ span: 12, order: 2 }}>
+                <Col className="imageCol controlsCol" xs={{ span: 24, order: 1 }} xl={{ span: 12, order: 2 }}>
                     <Image src="./ctrl.png" />
                 </Col>
             </Row>

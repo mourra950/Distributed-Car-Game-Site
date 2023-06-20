@@ -30,10 +30,20 @@ export default function ModelSection() {
                     </Float>
                     <Sparkles count={100} size={30} scale={7} />
                     <Environment preset="city" />
-                    <Html center >
-                        <div className='downloadbutn' >
-                            <Button>
+                    <Html center className='colbut' >
+                        <div className='downloadbutnD' >
+                            <Button href='https://drive.google.com/file/d/1Eevfei-Vwml0pyFAz687eggDX29U1RAI/view?usp=drive_link'>
                                 Download
+                            </Button>
+                        </div>
+                        <div className='downloadbutnG' >
+                            <Button href='https://github.com/mourra950/Distrubited-System-Racing-Cars'>
+                                Github Repo
+                            </Button>
+                        </div>
+                        <div className='downloadbutnY' >
+                            <Button href='https://youtu.be/XfoahjVGTwg'>
+                                Youtube Trailer
                             </Button>
                         </div>
                     </Html>

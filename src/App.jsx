@@ -1,14 +1,13 @@
 import React, { useRef, useState } from 'react'
-import { Button, Layout } from 'antd'
-const { Header, Content, Footer, Sider } = Layout;
-import { Canvas, useFrame } from '@react-three/fiber'
-import { PresentationControls, Environment, ContactShadows, Html } from '@react-three/drei'
+import { Layout } from 'antd'
+const { Content } = Layout;
 import ReactAudioPlayer from 'react-audio-player'
 import "./index.css"
-import { Model } from './SedanSports'
 import FirstSection from './firstsection';
 import ModelSection from './modelsection';
 import AboutSection from './AboutSection';
+import ProjectDSection from './projectd';
+
 
 function App() {
   const audio = useRef(null)
@@ -35,9 +34,9 @@ function App() {
       <Layout>
         <Content>
           <ModelSection />
+          <ProjectDSection />
           <FirstSection />
           <AboutSection />
-
         </Content>
 
       </Layout>

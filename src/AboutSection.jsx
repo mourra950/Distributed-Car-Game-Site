@@ -4,7 +4,7 @@ import { Avatar, Space } from 'antd';
 export default function AboutSection() {
     return (
         <div>
-            <Row >
+            {/*<Row >
                 <Col flex xs={24} xl={12}>
                     <Avatar className="Avatar" size={400} src='face3.png' />
                 </Col>
@@ -12,6 +12,7 @@ export default function AboutSection() {
                     <Avatar className="Avatar" size={400} src='transformed.png' />
                 </Col>
             </Row>
+    */}
         </div>
     )
 } 
