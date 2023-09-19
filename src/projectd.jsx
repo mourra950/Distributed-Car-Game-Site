@@ -1,26 +1,29 @@
 import { Button, Col, Row, Image, Typography, Statistic } from "antd"
 import { VerticalTimeline, VerticalTimelineElement, } from 'react-vertical-timeline-component';
 import { data } from "./steps"
-
+import axios from "axios";
 const { Title, Paragraph } = Typography;
 import 'react-vertical-timeline-component/style.min.css';
 import { useState, useEffect } from "react";
 
 export default function ProjectDSection() {
-    const [player, setPlayers] = useState(0);
-    const [rooms, setRooms] = useState(0);
+    const [player, setPlayers] = useState("Loading...");
+    const [rooms, setRooms] = useState("Loading...");
+
     useEffect(() => {
-        fetch("https://racing-cars-middleware.onrender.com/rooms/")
-            .then((response) => response.json())
-            .then((data) => setRooms(data.rooms))
+        axios.get("https://racing-cars-middleware.onrender.com/rooms/")
+            .then((response) => {
+                setRooms(response.data.rooms)
+            })
     }, []);
+
     useEffect(() => {
-        fetch("https://racing-cars-middleware.onrender.com/players/")
-            .then((response) => response.json())
-            .then((data) => setPlayers(data.players))
+        axios.get("https://racing-cars-middleware.onrender.com/players/")
+            .then((response) => setPlayers(response.data.players))
     }, []);
+
     useEffect(() => {
-        fetch("https://racing-cars-middleware.onrender.com/views/")
+        axios.post("https://racing-cars-middleware.onrender.com/views/")
     }, []);
     return (
         <div>
@@ -75,8 +78,9 @@ export default function ProjectDSection() {
             <VerticalTimeline
                 layout='2-columns'
             >
-                {data.map((data) => (
+                {data.map((data, index) => (
                     <VerticalTimelineElement
+                        key={index}
                         className="vertical-timeline-element--work"
                         contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                         date={data.date}
