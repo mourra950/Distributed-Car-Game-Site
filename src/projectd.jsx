@@ -1,4 +1,4 @@
-import { Button, Col, Row, Image, Typography, Statistic } from "antd"
+import { Col, Row, Image, Typography, Statistic } from "antd"
 import { VerticalTimeline, VerticalTimelineElement, } from 'react-vertical-timeline-component';
 import { data } from "./steps"
 import axios from "axios";
@@ -23,8 +23,10 @@ export default function ProjectDSection() {
     }, []);
 
     useEffect(() => {
-        axios.post("https://racing-cars-middleware.onrender.com/views/")
+        axios.get("https://racing-cars-middleware.onrender.com/views/")
+            .then(console.log("done"))
     }, []);
+
     return (
         <div>
 
@@ -35,10 +37,8 @@ export default function ProjectDSection() {
                 <Col className="stat" xs={24} sm={24} lg={12}>
                     <Statistic title="Players Joined" value={rooms} />
                 </Col>
-
             </Row>
             <Row className="rows">
-
                 <Col>
                     <Typography>
                         <Title className="textT">
