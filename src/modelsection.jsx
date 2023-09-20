@@ -1,11 +1,9 @@
-import React, { useRef, useState, useEffect, Suspense } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import React, { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
 import { Model } from './SedanSports'
-import { Button, Input, QRCode, Space } from 'antd';
-import { useGLTF, PresentationControls, Environment, Html, Float, Sparkles, Box } from '@react-three/drei'
+import { Button } from 'antd';
+import { PresentationControls, Environment, Html, Float, Sparkles, Box } from '@react-three/drei'
 export default function ModelSection() {
-    const [text, setText] = React.useState('https://ant.design/');
-
     return (
         <>
             <div className='modeldiv'>
@@ -40,13 +38,13 @@ export default function ModelSection() {
                             rotation={[0, 0.3, 0]}
                             polar={[-Math.PI / 3, Math.PI / 3]}
                             azimuth={[-Math.PI / 1.4, Math.PI / 2]}>
-                            <Suspense fallback={
-                                <>
-                                    <Box material-color="hotpink" />
-                                </>
-                            }>
+                            <Suspense fallback={<mesh>
+                                <boxGeometry args={[1, 1, 1, 2, 2, 2]} />
+                                <meshBasicMaterial wireframe color="red" />
+                            </mesh>}>
                                 <Model rotation={[0.4, 2.2, 0]} position={[0, 0.25, 0]} scale={1} />
                             </Suspense>
+
                         </PresentationControls>
                     </Float>
                     <Sparkles count={100} size={30} scale={7} />

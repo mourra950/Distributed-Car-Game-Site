@@ -1,7 +1,6 @@
-import React, { Suspense, useRef, useState } from 'react'
+import React, { Suspense, useState } from 'react'
 import { Layout } from 'antd'
 const { Content } = Layout;
-import ReactAudioPlayer from 'react-audio-player'
 import "./index.css"
 import FirstSection from './firstsection';
 import ModelSection from './modelsection';
@@ -10,13 +9,11 @@ import ProjectDSection from './projectd';
 
 function App() {
   // Set up state for the hovered and active state
-  const [show, setshow] = useState(false)
   return (
 
     <>
       <Layout>
         <Content>
-          
           <ModelSection />
           <ProjectDSection />
           <FirstSection />
